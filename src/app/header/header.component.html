@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['/']">Angular Routing</a>
+    <div class="navbar-nav">
+      <a class="nav-link"
+         [routerLink]="['/']"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{exact: true}"
+      >
+        Home
+      </a>
+      <a class="nav-link" [routerLink]="['/posts']" routerLinkActive="active">Posts</a>
+      <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+    </div>
+    <div class="btn-group">
+      <button
+        (click)="auth.login()"
+        class="btn btn-outline-primary"
+      >
+        Login
+      </button>
+      <button
+        (click)="auth.logout()"
+        class="btn btn-outline-danger"
+      >
+        Logout
+      </button>
+    </div>
+  </div>
+</nav>
